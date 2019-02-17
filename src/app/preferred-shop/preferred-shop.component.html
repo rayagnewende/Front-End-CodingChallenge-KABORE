@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-3" *ngFor="let shop of shops; let i=index">
+        <a>
+           <p>{{ shop.shop_name }}</p>
+           <img  [src]="shop.image" alt="shop.shop_name" class="img-responsive" style="max-height:100%;" />
+       
+           <button class="btn btn-danger" 
+                   style="padding:5px 40px; margin:5px;" 
+                   (click)="onRemoveShop(i)">Remove</button>
+       
+        </a>
+       </div>
+</div>

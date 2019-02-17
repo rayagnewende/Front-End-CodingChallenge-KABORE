@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active">
+        <a routerLink="shops">Shops</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li routerLinkActive="active">
+            <a routerLink="shops">Nearly shops</a>
+      </li>
+      <li routerLinkActive="active">
+          <a routerLink="shops/preferred">Preferred shops</a>
+        </li>
+      <li routerLinkActive="active" *ngIf="!isAuthentificate">
+        <a routerLink="signup">Sign up</a>
+      </li>
+      <li routerLinkActive="active"  *ngIf="!isAuthentificate" >
+        <a routerLink="signin">Sign in</a>
+      </li>
+     <li routerLinkActive="active" *ngIf="isAuthentificate">
+          <a (click)="onSignOut()" routerLink="signin">se deconnecter</a>
+        </li>    
+    </ul>
+  </div>
+</nav>

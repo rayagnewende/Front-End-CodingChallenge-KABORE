@@ -1,0 +1,10 @@
+
+<div class="row">
+    <app-shop-list-item 
+            *ngFor="let shop of shops; let i=index"
+            [shop_name]="shop.shop_name"
+            [shop_image]="shop.shop_image"
+            [distance]="shop.distance"
+            [index]="i" > 
+    </app-shop-list-item>
+</div>
